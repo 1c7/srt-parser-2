@@ -1,0 +1,11 @@
+﻿1
+00:00:03,120 --> 00:00:06,040
+Hi, I’m Carrie Anne, and welcome to Crash Course Computer Science!
+
+2
+00:00:06,040 --> 00:00:08,219
+We’re here: the final episode!
+
+3
+00:00:08,219 --> 00:00:12,080
+If you’ve watched the whole series, hopefully you’ve developed a newfound appreciation
