@@ -70,7 +70,7 @@ Hello
 ```  
 (Difference: use period as separator & millisecond has only 2 digit)
 
-## In short, Here is format support table
+## Format Support
 | Format       | Other parser         | srt-parser-2 |
 |--------------|----------------------|--------------|
 | 00:00:01,544 | Yes :white_check_mark: | Yes :white_check_mark: |
@@ -78,16 +78,16 @@ Hello
 | 00:00:00.05  | :question: Yes for some of them | Yes :white_check_mark: |
 
 
-## This is SRT format standard
+## SRT Format Standard (kind of)
 | Format       | Is this SRT standard  |
 |--------------|-----------------------|
 | 00:00:01,544 | Yes :white_check_mark:| 
 | 00:00:01.544 | No     :x:            |
 | 00:00:00.05  | No     :x:            |
 
-Note: There are no official SRT format standard.   
+Note: There are no official SRT standard.   
 `00:00:01.544` and `00:00:00.05` is not 100% wrong. There are gray area.          
-Most example/code package on the internet use `00:00:01,544`   
+But most tutorial/file/example/code on the internet use `00:00:01,544`   
 
 ## Conclusion: Why this srt parser is better?
 1. Support more time format
