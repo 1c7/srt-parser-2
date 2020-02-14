@@ -21,7 +21,19 @@ Turn into this:
 }]
 ```
 
-## Why this one special? There are already plently srt parser on npm.
+## Install
+todo
+
+## Usage
+todo
+
+## Author
+Cheng Zheng (chengzheng.apply@gmail.com)  
+
+## License
+MIT
+
+## Why this one special? There are already plently SRT parser on npm  
 At the time I am writing this (2020-Feb-14)     
 If you want to parse SRT with Javascript.  
 Here is your option:  
@@ -39,7 +51,6 @@ All of them can handle this:
 00:00:11,544 --> 00:00:12,682
 Hello
 ```
-
 
 ## But I want more.  
 I want to handle format like this:   
@@ -73,3 +84,15 @@ Hello
 | 00:00:01.544 | No     :x:            |
 | 00:00:00.05  | No     :x:            |
 
+## Conclusion: Why this srt parser is better?
+1. Support more time format
+2. Have extensive test
+
+## Why I write this npm package?:  
+I am improving [Tern - Subtitle File Translator](https://tern.1c7.me/)
+
+User of my desktop app tell me the they have trouble translate some of the `.srt` file  
+
+And I fount out these `.srt` file have format like `00:00:01.544` and `00:00:00.05`   
+
+I want handle these format that's why I write this.  
