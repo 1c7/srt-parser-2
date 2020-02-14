@@ -1,6 +1,6 @@
 (Work in Progress)
 ## srt-parser-2
-This is a SRT parser.    
+This is a SRT parser for Javascript      
 It read `.srt` file into an array.    
 
 
