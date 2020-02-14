@@ -59,17 +59,17 @@ Hello
 ```  
 (Difference: use period as separator & millisecond has only 2 digit)
 
-## In short
+## In short, Here is format support table
 | Format       | Other parser         | srt-parser-2 |
 |--------------|----------------------|--------------|
-| 00:00:11,544 | Yes                  | Yes          |
-| 00:00:11.544 | Yes for some of them | Yes          |
-| 00:00:00.05  | no                   | Yes          |
+| 00:00:01,544 | Yes :white_check_mark:                 | Yes    :white_check_mark:      |
+| 00:00:01.544 | :question: Yes for some of them | Yes     :white_check_mark:     |
+| 00:00:00.05  | No    :x:               | Yes    :white_check_mark:      |
 
-
+## This is format standard
 | Format       | Is this SRT standard |
 |--------------|----------------------|
-| 00:00:11,544 | Yes                  | 
-| 00:00:11.544 | No                   |
-| 00:00:00.05  | No                   |
+| 00:00:01,544 | Yes  :white_check_mark:                | 
+| 00:00:01.544 | No    :x:                |
+| 00:00:00.05  | No     :x:               |
 
