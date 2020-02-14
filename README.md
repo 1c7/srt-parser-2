@@ -75,24 +75,29 @@ Hello
 |--------------|----------------------|--------------|
 | 00:00:01,544 | Yes :white_check_mark: | Yes :white_check_mark: |
 | 00:00:01.544 | :question: Yes for some of them | Yes :white_check_mark: |
-| 00:00:00.05  | No    :x:               | Yes :white_check_mark: |
+| 00:00:00.05  | :question: Yes for some of them | Yes :white_check_mark: |
 
-## This is format standard
+
+## This is SRT format standard
 | Format       | Is this SRT standard  |
 |--------------|-----------------------|
 | 00:00:01,544 | Yes :white_check_mark:| 
 | 00:00:01.544 | No     :x:            |
 | 00:00:00.05  | No     :x:            |
 
+Note: There are no official SRT format standard.   
+`00:00:01.544` and `00:00:00.05` is not 100% wrong. There are gray area.          
+Most example/code package on the internet use `00:00:01,544`   
+
 ## Conclusion: Why this srt parser is better?
 1. Support more time format
 2. Have extensive test
 
 ## Why I write this npm package?:  
-I am improving [Tern - Subtitle File Translator](https://tern.1c7.me/)
+I am writing [Tern - Subtitle File Translator](https://tern.1c7.me/)
 
-User of my desktop app tell me the they have trouble translate some of the `.srt` file  
+Some of the user says they have trouble translate some of the `.srt` file  
 
-And I fount out these `.srt` file have format like `00:00:01.544` and `00:00:00.05`   
+And I found out these `.srt` file have format like `00:00:01.544` and `00:00:00.05`   
 
-I want handle these format that's why I write this.  
+that's why I write this   
