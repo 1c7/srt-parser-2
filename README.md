@@ -1,17 +1,16 @@
-(Work in Progress)
+(Work in Progress, not usable yet)
 ## srt-parser-2
 This is a SRT parser for Javascript      
 It read `.srt` file into an array.    
 
-
-Read this:
+Turn this:
 ```
 1
 00:00:11,544 --> 00:00:12,682
 Hello
 ```
 
-Turn into this:
+Into this:
 ```
 [{
     id: '1',
@@ -27,16 +26,12 @@ todo
 ## Usage
 todo
 
-## Author
-Cheng Zheng (chengzheng.apply@gmail.com)  
-
 ## License
 MIT
 
-## Why this one special? There are already plently SRT parser on npm  
-At the time I am writing this (2020-Feb-14)     
-If you want to parse SRT with Javascript.  
-Here is your option:  
+## Why? 
+Why this one special? There are plently SRT parser on npm  
+like: 
 
 * [subtitles-parser](https://www.npmjs.com/package/subtitles-parser) -- Last update(on npmjs): 2013-10-17
 * [subtitles-parser-vtt](https://www.npmjs.com/package/subtitles-parser-vtt) -- Last update: 2020-2-14
@@ -52,8 +47,7 @@ All of them can handle this:
 Hello
 ```
 
-## But I want more.  
-I want to handle format like this:   
+## But I want to handle format like:   
 ```
 1
 00:00:11.544 --> 00:00:12.682
@@ -62,7 +56,7 @@ Hello
 (Difference: use period as separator)   
 
 
-And this:  
+## And this:  
 ```
 1
 00:00:00.05 --> 00:00:02.00
@@ -89,11 +83,11 @@ Note: There are no official SRT standard.
 `00:00:01.544` and `00:00:00.05` is not 100% wrong. There are gray area.          
 But most tutorial/file/example/code on the internet use `00:00:01,544`   
 
-## Conclusion: Why this srt parser is better?
+## Conclusion
 1. Support more time format
 2. Have extensive test
 
-## Why I write this npm package?:  
+## Why I write this?
 I am writing [Tern - Subtitle File Translator](https://tern.1c7.me/)
 
 Some of the user says they have trouble translate some of the `.srt` file  
