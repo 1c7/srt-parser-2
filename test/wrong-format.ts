@@ -2,9 +2,11 @@ var { default: parser } = require("../src/index.js");
 var fs = require("fs");
 var chai = require("chai");
 
-var srt = fs.readFileSync("./test-file/correct.srt", { encoding: "utf-8" });
+var srt = fs.readFileSync("./test-file/dot-as-separator.srt", {
+  encoding: "utf-8"
+});
 
-describe("Test basic function", function() {
+describe("Test wrong srt", function() {
   chai.should();
   var result: string[];
   var parser_instance = new parser();
@@ -30,9 +32,5 @@ describe("Test basic function", function() {
   var originalData: string;
   it("parser.toSrt() should execute without crashes", function() {
     originalData = parser_instance.toSrt(result);
-  });
-
-  it("parser.toSrt() should convert object back as it was before without changes", function() {
-    chai.expect(srt.trim() === originalData.trim()).to.be.ok;
   });
 });

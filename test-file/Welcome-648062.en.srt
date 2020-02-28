@@ -1,0 +1,127 @@
+1
+00:00:00.05 --> 00:00:02.00
+- [Adam] Hello, my name is Adam Wilbert,
+
+2
+00:00:02.00 --> 00:00:03.01
+and I'd like to welcome you
+
+3
+00:00:03.01 --> 00:00:05.04
+to Learning Relational Databases.
+
+4
+00:00:05.04 --> 00:00:07.00
+In this course, I'm going
+to give you an overview
+
+5
+00:00:07.00 --> 00:00:08.09
+of the planning steps that
+you should move through
+
+6
+00:00:08.09 --> 00:00:11.00
+before you start development
+in order to ensure
+
+7
+00:00:11.00 --> 00:00:13.02
+that your system works as expected.
+
+8
+00:00:13.02 --> 00:00:15.00
+I'll start with an
+overview of what exactly
+
+9
+00:00:15.00 --> 00:00:17.09
+a relational database is and
+how its structure differs
+
+10
+00:00:17.09 --> 00:00:18.07
+from the spreadsheets
+
+11
+00:00:18.07 --> 00:00:20.03
+that you might be used to working with.
+
+12
+00:00:20.03 --> 00:00:22.03
+And I'll outline some of
+the hidden difficulties
+
+13
+00:00:22.03 --> 00:00:24.01
+that can arise if the
+structure of your data
+
+14
+00:00:24.01 --> 00:00:27.02
+isn't fully considered
+before development begins.
+
+15
+00:00:27.02 --> 00:00:30.00
+Then we'll discover the
+database development lifecycle
+
+16
+00:00:30.00 --> 00:00:32.05
+and use it as a guide for
+moving through the process
+
+17
+00:00:32.05 --> 00:00:35.04
+of thinking about our
+specific data storage needs.
+
+18
+00:00:35.04 --> 00:00:36.09
+Finally, we'll talk about all of the rules
+
+19
+00:00:36.09 --> 00:00:38.06
+that we've identified
+about how the database
+
+20
+00:00:38.06 --> 00:00:40.06
+needs to function and
+start translating them
+
+21
+00:00:40.06 --> 00:00:41.09
+into the components that will make up
+
+22
+00:00:41.09 --> 00:00:44.02
+the actual relational database.
+
+23
+00:00:44.02 --> 00:00:46.05
+And along the way, we'll
+discuss design considerations
+
+24
+00:00:46.05 --> 00:00:48.03
+that'll make the database
+easier to construct
+
+25
+00:00:48.03 --> 00:00:50.05
+and easier to maintain.
+
+26
+00:00:50.05 --> 00:00:52.00
+So I'd like to thank you for joining me
+
+27
+00:00:52.00 --> 00:00:53.07
+in learning relational databases.
+
+28
+00:00:53.07 --> 00:00:55.04
+Now let's get started.
+

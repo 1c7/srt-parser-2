@@ -41,6 +41,6 @@
     "scripts": {
         "build": "tsc",
         "dev": "tsc -watch",
-        "test": "mocha ./dist/test/test.js"
+        "test": "mocha ./dist/test --recursive"
     }
 }
