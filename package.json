@@ -1,6 +1,6 @@
 {
     "name": "srt-parser-2",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "license": "MIT",
     "keywords": [
         "subtitles",
@@ -21,8 +21,8 @@
     },
     "homepage": "https://github.com/1c7/srt-parser-2#readme",
     "prepublish": "tsc",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
+    "main": "dist/src/index.js",
+    "types": "dist/src/index.d.ts",
     "devDependencies": {
         "@types/node": "^13.7.6",
         "mocha": "*",
