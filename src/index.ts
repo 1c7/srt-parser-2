@@ -25,10 +25,10 @@ export default class Parser {
       return str;
     }
     if (ms.length > 3) {
-      return `${front}${this.seperator}${ms.slice(0, 3)}`;
+      return `${front},${ms.slice(0, 3)}`;
     }
     if (ms.length < 3) {
-      return `${front}${this.seperator}${ms.padEnd(3, "0")}`;
+      return `${front},${ms.padEnd(3, "0")}`;
     }
   }
 
