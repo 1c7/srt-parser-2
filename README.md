@@ -1,15 +1,16 @@
 ## srt-parser-2
-This is a SRT parser for Javascript      
-It read `.srt` file into an array.    
+This is a SRT parser for Javascript       
+It read `.srt` file into an array    
 
-Turn this:
+## Example
+This is a srt format file:   
 ```
 1
 00:00:11,544 --> 00:00:12,682
 Hello
 ```
 
-Into this:
+it would become:
 ```
 [{
     id: '1',
@@ -19,14 +20,19 @@ Into this:
 }]
 ```
 
+### Enviroment support
+Since it only process text,   
+it should work  in both `Browser` and `Node.js` enviroment
+
 ## Install
 ```
-npm i srt-parser-2
+npm install srt-parser-2
 ```
 
 ## Usage
 ```javascript
 var { default: srtParser2 } = require("srt-parser-2")
+
 var parser = new srtParser2()
 var srt = `
 1
@@ -49,16 +55,16 @@ like:
 * [subtitle](https://www.npmjs.com/package/subtitle):  Last update:  2019-4-4
 * [srt](https://www.npmjs.com/package/srt):  Last update: 2012-7-18
 
-## What's wrong with these?
-Nothing.    
-All of them can handle this: 
+## What's wrong with them?
+Nothing wrong.      
+All of them can handle this format: 
 ```
 1
 00:00:11,544 --> 00:00:12,682
 Hello
 ```
 
-## But I want to handle format like:   
+## But I want to handle format like these:   
 ```
 00:00:11.544
 ```
