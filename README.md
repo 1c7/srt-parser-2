@@ -1,4 +1,3 @@
-(Work in Progress, not usable yet)
 ## srt-parser-2
 This is a SRT parser for Javascript      
 It read `.srt` file into an array.    
@@ -61,30 +60,41 @@ Hello
 
 ## But I want to handle format like:   
 ```
-1
-00:00:11.544 --> 00:00:12.682
-Hello
+00:00:11.544
 ```
-(Difference: use period as separator)   
+This is wrong format, it use period as separator 
 
-
-## And this:  
+Or this:
 ```
-1
-00:00:00.05 --> 00:00:02.00
-Hello
+00:00:11,5440
+```
+This is also wrong format, millisecond has 4 digit
+
+Or this:
+```
+1:00:11,5
+```
+Similiar, hour & millisecond is only 1 digit (wrong)
+
+Or this
+```
+00:00:00.05
 ```  
-(Difference: use period as separator & millisecond has only 2 digit)
+
+etc
 
 ## Format Support
 | Format       | Other parser         | srt-parser-2 |
 |--------------|----------------------|--------------|
 | 00:00:01,544 | Yes :white_check_mark: | Yes :white_check_mark: |
 | 00:00:01.544 | :question: Yes for some of them | Yes :white_check_mark: |
-| 00:00:00.05  | :question: Yes for some of them | Yes :white_check_mark: |
+| 00:00:01.54  | :question: Yes for some of them | Yes :white_check_mark: |
+| 00:00:00.3333  | No :x: | Yes :white_check_mark: |
+| 00:00:00.3  | No :x: | Yes :white_check_mark: |
+| 0:0:0.3  | No :x: | Yes :white_check_mark: |
 
 
-## SRT Format Standard (kind of)
+<!-- ## SRT Format Standard (kind of)
 | Format       | Is this SRT standard  |
 |--------------|-----------------------|
 | 00:00:01,544 | Yes :white_check_mark:| 
@@ -93,10 +103,10 @@ Hello
 
 Note: There are no official SRT standard.   
 `00:00:01.544` and `00:00:00.05` is not 100% wrong. There are gray area.          
-But most tutorial/file/example/code on the internet use `00:00:01,544`   
+But most tutorial/file/example/code on the internet use `00:00:01,544`    -->
 
 ## Conclusion
-1. Support more time format
+1. Support more time format (even wrong format)
 2. Have extensive test
 
 ## Why I write this?
