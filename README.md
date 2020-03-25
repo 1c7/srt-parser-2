@@ -45,10 +45,10 @@ MIT
 Why this one special? There are plently SRT parser on npm  
 like: 
 
-* [subtitles-parser](https://www.npmjs.com/package/subtitles-parser) -- Last update(on npmjs): 2013-10-17
-* [subtitles-parser-vtt](https://www.npmjs.com/package/subtitles-parser-vtt) -- Last update: 2020-2-14
-* [subtitle](https://www.npmjs.com/package/subtitle) -- Last update:  2019-4-4
-* [srt](https://www.npmjs.com/package/srt) -- Last update: 2012-7-18
+* [subtitles-parser](https://www.npmjs.com/package/subtitles-parser): Last update(on npmjs): 2013-10-17
+* [subtitles-parser-vtt](https://www.npmjs.com/package/subtitles-parser-vtt):  Last update: 2020-2-14
+* [subtitle](https://www.npmjs.com/package/subtitle):  Last update:  2019-4-4
+* [srt](https://www.npmjs.com/package/srt):  Last update: 2012-7-18
 
 ## What's wrong with these?
 Nothing.    

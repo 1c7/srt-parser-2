@@ -19,16 +19,62 @@ export default class Parser {
     // 00:00:28,9    Become 00:00:28,900
     // 00:00:28,0    Become 00:00:28,000
     // 00:00:28,01   Become 00:00:28,010
+    // 0:00:10,500   Become 00:00:10,500
     let str = time.replace(".", ",");
-    var [front, ms] = str.split(',');
-    if (ms.length == 3) {
+
+    var hour = null;
+    var minute = null;
+    var second = null;
+    var millisecond = null;
+
+    // Handle millisecond
+    var [front, ms] = str.split(",");
+    millisecond = this.fixed_str_digit(3, ms);
+
+    // Handle hour
+    var [a_hour, a_minute, a_second] = front.split(":");
+    hour = this.fixed_str_digit(2, a_hour, false);
+    minute = this.fixed_str_digit(2, a_minute, false);
+    second = this.fixed_str_digit(2, a_second, false);
+
+    return `${hour}:${minute}:${second},${millisecond}`;
+  }
+
+  /*
+  // make sure string is 'how_many_digit' long
+  // if str is shorter than how_many_digit, pad with 0
+  // if str is longer than how_many_digit, slice from the beginning
+  // Example:
+
+  Input: fixed_str_digit(3, '100')
+  Output: 100
+  Explain: unchanged, because "100" is 3 digit
+
+  Input: fixed_str_digit(3, '50')
+  Output: 500
+  Explain: pad end with 0
+
+  Input: fixed_str_digit(3, '50', false)
+  Output: 050
+  Explain: pad start with 0
+
+  Input: fixed_str_digit(3, '7771')
+  Output: 777
+  Explain: slice from beginning
+  */
+  private fixed_str_digit(how_many_digit: number, str: string, padEnd: boolean = true) {
+    if (str.length == how_many_digit) {
       return str;
     }
-    if (ms.length > 3) {
-      return `${front},${ms.slice(0, 3)}`;
+    if (str.length > how_many_digit) {
+      return str.slice(0, how_many_digit);
     }
-    if (ms.length < 3) {
-      return `${front},${ms.padEnd(3, "0")}`;
+    if (str.length < how_many_digit) {
+      if (padEnd) {
+        return str.padEnd(how_many_digit, "0");
+      } else {
+        return str.padStart(how_many_digit, "0");
+      }
     }
   }
 
