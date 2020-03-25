@@ -91,8 +91,12 @@ etc
 | 00:00:01.54  | :question: Yes for some of them | Yes :white_check_mark: | 00:00:01,544 |
 | 00:00:00.3333  | No :x: | Yes :white_check_mark: | 00:00:00,333 |
 | 00:00:00.3  | No :x: | Yes :white_check_mark: | 00:00:00,300 |
-| 0:0:0.3  | No :x: | Yes :white_check_mark: | 00:00:00,300 |
+| 1:2:3.4  | No :x: | Yes :white_check_mark: | 01:02:03,400 |
 
+Basic principle:
+1. If hour,minute,second is shorter than 2 digit, pad start with "0", if longer than 2 digit, only save first 2 digit.
+2. Millisecond is the same, but it's 3 digit.
+3. Seperator can be `.`(periods) or `,`(comma), periods(incorrect) will be replace with comma(correct)
 
 <!-- ## SRT Format Standard (kind of)
 | Format       | Is this SRT standard  |
