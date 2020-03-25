@@ -84,14 +84,14 @@ Or this
 etc
 
 ## Format Support
-| Format       | Other parser         | srt-parser-2 |
-|--------------|----------------------|--------------|
-| 00:00:01,544 | Yes :white_check_mark: | Yes :white_check_mark: |
-| 00:00:01.544 | :question: Yes for some of them | Yes :white_check_mark: |
-| 00:00:01.54  | :question: Yes for some of them | Yes :white_check_mark: |
-| 00:00:00.3333  | No :x: | Yes :white_check_mark: |
-| 00:00:00.3  | No :x: | Yes :white_check_mark: |
-| 0:0:0.3  | No :x: | Yes :white_check_mark: |
+| Format       | Other parser         | srt-parser-2 | srt-parser-2 would turn this into |
+|--------------|----------------------|--------------|--------------|
+| 00:00:01,544 | Yes :white_check_mark: | Yes :white_check_mark: | 00:00:01,544 |
+| 00:00:01.544 | :question: Yes for some of them | Yes :white_check_mark: | 00:00:01,544 |
+| 00:00:01.54  | :question: Yes for some of them | Yes :white_check_mark: | 00:00:01,544 |
+| 00:00:00.3333  | No :x: | Yes :white_check_mark: | 00:00:00,333 |
+| 00:00:00.3  | No :x: | Yes :white_check_mark: | 00:00:00,300 |
+| 0:0:0.3  | No :x: | Yes :white_check_mark: | 00:00:00,300 |
 
 
 <!-- ## SRT Format Standard (kind of)
