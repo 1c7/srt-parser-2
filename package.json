@@ -1,7 +1,7 @@
 {
     "name": "srt-parser-2",
     "description": "Parse SRT into array",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "license": "MIT",
     "scripts": {
         "build": "tsc",
@@ -24,8 +24,9 @@
         "subtitle",
         "srt",
         "subrip",
-        "subtitles parser",
-        "subtitle parser"
+        "subtitle parser",
+        "srt parser",
+        "caption"
     ],
     "repository": {
         "type": "git",

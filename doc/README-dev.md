@@ -4,7 +4,9 @@ npm run dev
 ```
 
 ## 测试
+忘了当初为什么选 mocha
 ```
+npm run build
 npm test
 ```
 
