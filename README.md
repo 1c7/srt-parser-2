@@ -2,6 +2,17 @@
 This is a SRT parser for Javascript       
 It read `.srt` file into an array    
 
+## Install
+`npm`
+```
+npm install srt-parser-2
+```
+
+or `yarn`
+```
+yarn add srt-parser-2
+```
+
 ## Example
 This is a srt format file:   
 ```
@@ -23,11 +34,6 @@ it would become:
 ### Enviroment support
 Since it only process text,   
 it should work  in both `Browser` and `Node.js` enviroment
-
-## Install
-```
-npm install srt-parser-2
-```
 
 ## Usage
 ```javascript
