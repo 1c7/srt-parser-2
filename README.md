@@ -49,12 +49,23 @@ var result = parser.fromSrt(srt);
 console.log(result);
 ```
 
+## CLI
+```
+npx srt-parser-2 -i input.srt -o output.json --minify
+```
+Options:  
+
+| Option         | Required | Default     |
+|----------------|----------|-------------|
+| --input or -i  | Yes      |             |
+| --output or -o | No       | output.json |
+| --minify       | No       | false       |
+
 ## License
 MIT
 
 ## Why? 
-Why this one special? There are plently SRT parser on npm  
-like: 
+Why this one special? There are plently SRT parser on npm like: 
 
 * [subtitles-parser](https://www.npmjs.com/package/subtitles-parser): Last update(on npmjs): 2013-10-17
 * [subtitles-parser-vtt](https://www.npmjs.com/package/subtitles-parser-vtt):  Last update: 2020-2-14
