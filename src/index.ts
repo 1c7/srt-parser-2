@@ -1,4 +1,4 @@
-interface Line {
+export interface Line {
   id: string;
   startTime: string;
   endTime: string;
