@@ -4,7 +4,7 @@
     "version": "1.1.7",
     "license": "MIT",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc --declaration",
         "dev": "tsc -watch",
         "test": "mocha ./dist/test --recursive"
     },
