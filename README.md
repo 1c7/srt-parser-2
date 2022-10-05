@@ -49,7 +49,7 @@ it should work in both `Browser` and `Node.js` enviroment
 ## Usage
 
 ```javascript
-var { default: srtParser2 } = require("srt-parser-2");
+import srtParser2 from "srt-parser-2";
 
 var parser = new srtParser2();
 var srt = `
