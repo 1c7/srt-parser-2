@@ -1,3 +1,6 @@
+// Test .srt file using "dot" between second and millisecond
+// For example `00:00:52.34`
+// Notice the "." in 52 and 34?
 import chai from "chai";
 import fs from "fs";
 import parser from "../src/index.js";

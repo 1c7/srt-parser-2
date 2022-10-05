@@ -3,6 +3,7 @@ import parser, { Line } from "../src/index.js";
 import chai from "chai";
 import fs from "fs";
 
+// Read a correct .srt file
 var srt = fs.readFileSync("./test-file/correct.srt", { encoding: "utf-8" });
 
 describe("Test basic function", function () {
