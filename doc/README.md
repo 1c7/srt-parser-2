@@ -1,21 +1,14 @@
-## Documentation
+# Doc
 
-## How to publish new version
-```
-npm publish
-```
+* [How to develop](doc/0. How to Develop.md)
+* [How to test](doc/1. How To Test.md)
+* [How to publish new version](doc/2. How to Publish New Version.md)
 
-## Development
-```
-npm run dev
-```
 
-## Test
-```
-npm run build
-npm test
-```
+## Note
+I come back to this Repo like once a years.   
+(Sometime people send pull request on Github, I have to review that.)     
 
-## 如何更新版本
-1. 修改 package.json 里的版本
-2. npm publish
+I forgot a lot of things too. (like how to use `chai` and `mocha`) 
+Here is mostly notes to help me remember.   
+
