@@ -1,8 +1,8 @@
 # Doc
 
-* [How to develop](doc/0. How to Develop.md)
-* [How to test](doc/1. How To Test.md)
-* [How to publish new version](doc/2. How to Publish New Version.md)
+* [How to develop](0.%20How%20to%20Develop.md)
+* [How to test](doc/1.%20How%20To%20Test.md)
+* [How to publish new version](doc/2.%20How%20to%20Publish%20New%20Version.md)
 
 
 ## Note
