@@ -165,13 +165,3 @@ But most tutorial/file/example/code on the internet use `00:00:01,544`    -->
 
 1. Support more time format (even wrong format)
 2. Have extensive test
-
-## Why I write this?
-
-I am writing [Tern - Subtitle File Translator](https://tern.1c7.me/)
-
-Some of the user says they have trouble translate some of the `.srt` file
-
-And I found out these `.srt` file have format like `00:00:01.544` and `00:00:00.05`
-
-that's why I write this
