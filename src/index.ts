@@ -1,9 +1,18 @@
 export interface Line {
   id: string;
   startTime: string;
+  startSeconds: number;
   endTime: string;
+  endSeconds: number;
   text: string;
 }
+
+const timestampToSeconds = (srtTimestamp: string) => {
+  const [rest, millisecondsString] = srtTimestamp.split(",");
+  const milliseconds = parseInt(millisecondsString);
+  const [hours, minutes, seconds] = rest.split(":").map((x) => parseInt(x));
+  return milliseconds * 0.001 + seconds + 60 * minutes + 3600 * hours;
+};
 
 export default class Parser {
   seperator = ",";
@@ -62,7 +71,11 @@ export default class Parser {
   Output: 777
   Explain: slice from beginning
   */
-  private fixed_str_digit(how_many_digit: number, str: string, padEnd: boolean = true) {
+  private fixed_str_digit(
+    how_many_digit: number,
+    str: string,
+    padEnd: boolean = true
+  ) {
     if (str.length == how_many_digit) {
       return str;
     }
@@ -80,7 +93,8 @@ export default class Parser {
 
   private tryComma(data: string) {
     data = data.replace(/\r/g, "");
-    var regex = /(\d+)\n(\d{1,2}:\d{2}:\d{2},\d{1,3}) --> (\d{1,2}:\d{2}:\d{2},\d{1,3})/g;
+    var regex =
+      /(\d+)\n(\d{1,2}:\d{2}:\d{2},\d{1,3}) --> (\d{1,2}:\d{2}:\d{2},\d{1,3})/g;
     let data_array = data.split(regex);
     data_array.shift(); // remove first '' in array
     return data_array;
@@ -88,7 +102,8 @@ export default class Parser {
 
   private tryDot(data: string) {
     data = data.replace(/\r/g, "");
-    var regex = /(\d+)\n(\d{1,2}:\d{2}:\d{2}\.\d{1,3}) --> (\d{1,2}:\d{2}:\d{2}\.\d{1,3})/g;
+    var regex =
+      /(\d+)\n(\d{1,2}:\d{2}:\d{2}\.\d{1,3}) --> (\d{1,2}:\d{2}:\d{2}\.\d{1,3})/g;
     let data_array = data.split(regex);
     data_array.shift(); // remove first '' in array
     this.seperator = ".";
@@ -104,11 +119,15 @@ export default class Parser {
 
     var items = [];
     for (var i = 0; i < data_array.length; i += 4) {
+      const startTime = this.correctFormat(data_array[i + 1].trim());
+      const endTime = this.correctFormat(data_array[i + 2].trim());
       var new_line = {
         id: data_array[i].trim(),
-        startTime: this.correctFormat(data_array[i + 1].trim()),
-        endTime: this.correctFormat(data_array[i + 2].trim()),
-        text: data_array[i + 3].trim()
+        startTime,
+        startSeconds: timestampToSeconds(startTime),
+        endTime,
+        endSeconds: timestampToSeconds(endTime),
+        text: data_array[i + 3].trim(),
       };
       items.push(new_line);
     }

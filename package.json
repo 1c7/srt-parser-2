@@ -15,7 +15,7 @@
     "types": "dist/src/index.d.ts",
     "devDependencies": {
         "@types/mocha": "^9.0.0",
-        "@types/node": "^16.10.2",
+        "@types/node": "^16.11.64",
         "chai": "^4.3.4",
         "mocha": "*",
         "should": "*",
