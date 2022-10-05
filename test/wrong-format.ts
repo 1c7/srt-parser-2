@@ -1,27 +1,27 @@
-var { default: parser } = require("../src/index.js");
-var fs = require("fs");
-var chai = require("chai");
+import parser, { Line } from "../src/index.js";
 
+import chai from "chai";
+import fs from "fs";
 
-describe("Test wrong format: dot as separator", function() {
+describe("Test wrong format: dot as separator", function () {
   var srt = fs.readFileSync("./test-file/dot-as-separator.srt", {
-    encoding: "utf-8"
+    encoding: "utf-8",
   });
 
   chai.should();
-  var result: string[];
+  var result: Line[];
   var parser_instance = new parser();
 
-  it("parser.fromSrt() should execute without crashes", function() {
+  it("parser.fromSrt() should execute without crashes", function () {
     result = parser_instance.fromSrt(srt);
   });
 
-  it("parser.fromSrt() should return array", function() {
+  it("parser.fromSrt() should return array", function () {
     chai.expect(result).to.be.a("array");
     chai.expect(result).to.have.lengthOf(2);
   });
 
-  it("parser.fromSrt() should contain valid subtitle objects", function() {
+  it("parser.fromSrt() should contain valid subtitle objects", function () {
     for (var i in result) {
       var s = result[i];
       chai.expect(s).to.have.property("id");
@@ -31,31 +31,30 @@ describe("Test wrong format: dot as separator", function() {
     }
   });
 
-  var originalData: string;
-  it("parser.toSrt() should execute without crashes", function() {
-    originalData = parser_instance.toSrt(result);
+  it("parser.toSrt() should execute without crashes", function () {
+    parser_instance.toSrt(result);
   });
 });
 
-describe("Test wrong format: single digit hour", function() {
+describe("Test wrong format: single digit hour", function () {
   var srt = fs.readFileSync("./test-file/single-digit-hour.srt", {
-    encoding: "utf-8"
+    encoding: "utf-8",
   });
 
   chai.should();
-  var result: string[];
+  var result: Line[];
   var parser_instance = new parser();
 
-  it("parser.fromSrt() should execute without crashes", function() {
+  it("parser.fromSrt() should execute without crashes", function () {
     result = parser_instance.fromSrt(srt);
   });
 
-  it("parser.fromSrt() should return array", function() {
+  it("parser.fromSrt() should return array", function () {
     chai.expect(result).to.be.a("array");
     chai.expect(result).to.have.lengthOf(3);
   });
 
-  it("parser.fromSrt() should contain valid subtitle objects", function() {
+  it("parser.fromSrt() should contain valid subtitle objects", function () {
     for (var i in result) {
       var s = result[i];
       chai.expect(s).to.have.property("id");
@@ -65,7 +64,7 @@ describe("Test wrong format: single digit hour", function() {
     }
   });
 
-  it("parser.toSrt() should execute without crashes", function() {
-    var originalData = parser_instance.toSrt(result);
+  it("parser.toSrt() should execute without crashes", function () {
+    parser_instance.toSrt(result);
   });
 });

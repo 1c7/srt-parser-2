@@ -1,6 +1,6 @@
-var { default: parser } = require("../src/index.js");
-var fs = require("fs");
-var chai = require("chai");
+import chai from "chai";
+import fs from "fs";
+import parser from "../src/index.js";
 
 var srt = fs.readFileSync("./test-file/Welcome-648062.en.srt", {
   encoding: "utf-8",
