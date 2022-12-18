@@ -1,3 +1,4 @@
+// Turn incorrect time format to correct time format
 import chai from "chai";
 import parser from "../src/index";
 

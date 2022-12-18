@@ -57,8 +57,12 @@ Hello
 
 import srtParser2 from "srt-parser-2";
 var parser = new srtParser2();
-var result = parser.fromSrt(srt);
-console.log(result);
+var srt_array = parser.fromSrt(srt);
+console.log(srt_array);
+
+// turn array back to SRT string.
+var srt_string = parser.toSrt(srt_array);
+console.log(srt_string);
 ```
 
 You can run this example using `node example/1.Comma.js`
