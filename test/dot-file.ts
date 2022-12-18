@@ -3,7 +3,7 @@
 // Notice the "." in 52 and 34?
 import chai from "chai";
 import fs from "fs";
-import parser from "../src/index.js";
+import parser from "../src/index";
 
 var srt = fs.readFileSync("./test-file/Welcome-648062.en.srt", {
   encoding: "utf-8",

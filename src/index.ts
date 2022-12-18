@@ -138,11 +138,12 @@ const timestampToSeconds = (srtTimestamp: string) => {
   toSrt(data: Array<Line>) {
     var res = "";
 
+    const end_of_line = "\r\n";
     for (var i = 0; i < data.length; i++) {
       var s = data[i];
-      res += s.id + "\r\n";
-      res += s.startTime + " --> " + s.endTime + "\r\n";
-      res += s.text.replace("\n", "\r\n") + "\r\n\r\n";
+      res += s.id + end_of_line;
+      res += s.startTime + " --> " + s.endTime + end_of_line;
+      res += s.text.replace("\n", end_of_line) + end_of_line + end_of_line;
     }
 
     return res;

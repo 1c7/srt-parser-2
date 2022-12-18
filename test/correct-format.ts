@@ -1,5 +1,5 @@
 import chai from "chai";
-import parser from "../src/index.js";
+import parser from "../src/index";
 
 describe("Test different time format", function () {
   chai.should();

@@ -1,4 +1,4 @@
-import parser, { Line } from "../src/index.js";
+import parser, { Line } from "../src/index";
 
 import chai from "chai";
 import fs from "fs";
