@@ -1,7 +1,7 @@
 {
   "name": "srt-parser-2",
   "description": "Parse SRT into array",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "scripts": {
     "build": "tsc --declaration",
@@ -11,8 +11,8 @@
   "bin": {
     "srt-parser-2": "./bin/index.js"
   },
-  "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
     "@types/chai": "^4.3.4",
     "@types/jest": "^29.2.4",

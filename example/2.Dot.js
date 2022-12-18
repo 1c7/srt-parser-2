@@ -1,4 +1,5 @@
-import srtParser2 from "srt-parser-2";
+// node example/2.Dot.js
+const srtParser2 = require('srt-parser-2').default
 
 var srt = `
 1
