@@ -1,4 +1,4 @@
-export interface Line {
+interface Line {
   id: string;
   startTime: string;
   startSeconds: number;
@@ -14,7 +14,7 @@ const timestampToSeconds = (srtTimestamp: string) => {
   return milliseconds * 0.001 + seconds + 60 * minutes + 3600 * hours;
 };
 
-export default class Parser {
+ class Parser {
   seperator = ",";
 
   correctFormat(time: string) {
@@ -148,3 +148,6 @@ export default class Parser {
     return res;
   }
 }
+
+export default Parser
+export { Line }
