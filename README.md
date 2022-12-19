@@ -87,12 +87,12 @@ MIT
 
 ## Why?
 
-Why this one special? There are plently SRT parser on npm like:
+Why this one special? There are plently SRT parser on npm:
 
-- [subtitles-parser](https://www.npmjs.com/package/subtitles-parser): Last update(on npmjs): 2013-10-17
-- [subtitles-parser-vtt](https://www.npmjs.com/package/subtitles-parser-vtt): Last update: 2020-2-14
-- [subtitle](https://www.npmjs.com/package/subtitle): Last update: 2019-4-4
-- [srt](https://www.npmjs.com/package/srt): Last update: 2012-7-18
+- [subtitles-parser](https://www.npmjs.com/package/subtitles-parser)
+- [subtitles-parser-vtt](https://www.npmjs.com/package/subtitles-parser-vtt)
+- [subtitle](https://www.npmjs.com/package/subtitle)
+- [srt](https://www.npmjs.com/package/srt)
 
 ## What's wrong with them?
 
@@ -119,7 +119,7 @@ Or this:
 00:00:11,5440
 ```
 
-This is also wrong format, millisecond has 4 digit
+This is also wrong format, millisecond has 4 digit (should be 3)
 
 Or this:
 
