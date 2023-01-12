@@ -7,7 +7,7 @@ interface Line {
   text: string;
 }
 
- class Parser {
+class Parser {
   seperator = ",";
 
   timestampToSeconds(srtTimestamp: string) {
@@ -17,7 +17,7 @@ interface Line {
     const result = milliseconds * 0.001 + seconds + 60 * minutes + 3600 * hours;
 
     // fix odd JS roundings, e.g. timestamp '00:01:20,460' result is 80.46000000000001
-    return  Math.round(result * 1000) / 1000;
+    return Math.round(result * 1000) / 1000;
   };
 
   correctFormat(time: string) {
