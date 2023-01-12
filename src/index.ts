@@ -7,15 +7,18 @@ interface Line {
   text: string;
 }
 
-const timestampToSeconds = (srtTimestamp: string) => {
-  const [rest, millisecondsString] = srtTimestamp.split(",");
-  const milliseconds = parseInt(millisecondsString);
-  const [hours, minutes, seconds] = rest.split(":").map((x) => parseInt(x));
-  return milliseconds * 0.001 + seconds + 60 * minutes + 3600 * hours;
-};
-
  class Parser {
   seperator = ",";
+
+  timestampToSeconds(srtTimestamp: string) {
+    const [rest, millisecondsString] = srtTimestamp.split(",");
+    const milliseconds = parseInt(millisecondsString);
+    const [hours, minutes, seconds] = rest.split(":").map((x) => parseInt(x));
+    const result = milliseconds * 0.001 + seconds + 60 * minutes + 3600 * hours;
+
+    // fix odd JS roundings, e.g. timestamp '00:01:20,460' result is 80.46000000000001
+    return  Math.round(result * 1000) / 1000;
+  };
 
   correctFormat(time: string) {
     // Fix the format if the format is wrong
@@ -124,9 +127,9 @@ const timestampToSeconds = (srtTimestamp: string) => {
       var new_line = {
         id: data_array[i].trim(),
         startTime,
-        startSeconds: timestampToSeconds(startTime),
+        startSeconds: this.timestampToSeconds(startTime),
         endTime,
-        endSeconds: timestampToSeconds(endTime),
+        endSeconds: this.timestampToSeconds(endTime),
         text: data_array[i + 3].trim(),
       };
       items.push(new_line);
