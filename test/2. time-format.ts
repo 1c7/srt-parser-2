@@ -67,3 +67,32 @@ describe("Test different time format", function () {
   });
 
 });
+
+describe("Test timestampToSeconds", function () {
+  chai.should();
+  var p = new parser();
+
+  // Check if rounding is correct. 460 * 0.001 + 20 + 60 + 3600 * 0 returns 80.46000000000001 in JS
+  it("00:01:20,460 should become 80.46", function () {
+    var result = p.timestampToSeconds("00:01:20,460");
+    chai.expect(result).to.equal(80.46);
+  });
+
+  // 3 digit
+  it("00:01:20,488 should become 80.488", function () {
+    var result = p.timestampToSeconds("00:01:20,488");
+    chai.expect(result).to.equal(80.488);
+  });
+
+  // 1 digit
+  it("00:01:20,500 should become 80.5", function () {
+    var result = p.timestampToSeconds("00:01:20,500");
+    chai.expect(result).to.equal(80.5);
+  });
+
+  // 0 digit
+  it("00:01:20,000 should become 80", function () {
+    var result = p.timestampToSeconds("00:01:20,000");
+    chai.expect(result).to.equal(80);
+  });
+});
