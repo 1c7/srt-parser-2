@@ -5,7 +5,7 @@ import { readFile, writeFile } from "fs/promises";
 
 import { hideBin } from "yargs/helpers";
 import path from "path";
-import srtParser2 from "../dist/src/index";
+import srtParser2 from "../dist/index.js";
 import yargs from "yargs/yargs";
 
 var argv = yargs(hideBin(process.argv)).argv;
