@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc --declaration",
     "dev": "tsc -watch",
-    "test": "mocha -r ts-node/register test/**/*.ts"
+    "test": "mocha -r esbuild-register test/**/*.ts"
   },
   "bin": {
     "srt-parser-2": "./bin/index.js"
@@ -19,6 +19,7 @@
     "@types/jest": "^29.2.4",
     "@types/node": "^18.11.17",
     "chai": "^4.3.7",
+    "esbuild-register": "^3.4.2",
     "jest": "^29.3.1",
     "mocha": "^10.2.0",
     "should": "^13.2.3",
