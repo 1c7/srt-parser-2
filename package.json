@@ -3,6 +3,7 @@
   "description": "Parse SRT into array",
   "version": "1.2.2",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "tsc --declaration",
     "dev": "tsc -watch",
