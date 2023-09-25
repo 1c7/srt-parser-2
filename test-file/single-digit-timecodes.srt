@@ -1,0 +1,44 @@
+1
+0:0:7,560 --> 0:0:9,700
+- [Adam] Hello, my name is Adam Wilbert,
+
+2
+0:0:9,700 --> 0:0:10,520
+and I'd like to welcome you
+
+3
+0:0:10,840 --> 0:0:12,530
+to Learning Relational Databases.
+
+4
+0:0:12,530 --> 0:0:14,570
+In this course, I'm going
+to give you an overview
+
+5
+0:0:15,250 --> 0:0:18,540
+of the planning steps that
+you should move through
+
+6
+0:0:18,570 --> 0:0:21,350
+before you start development
+in order to ensure
+
+7
+0:0:21,360 --> 0:0:22,620
+that your system works as expected.
+
+8
+0:0:22,620 --> 0:0:24,830
+I'll start with an
+overview of what exactly
+
+9
+0:0:24,830 --> 0:0:27,490
+a relational database is and
+how its structure differs
+
+10
+0:0:27,530 --> 0:0:28,340
+from the spreadsheets
